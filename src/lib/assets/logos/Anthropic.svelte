@@ -4,6 +4,7 @@
   import { fade } from 'svelte/transition'
 
   export let animateOnMount = false
+  export let delay = 0
 
   let loaded = false
 
@@ -13,7 +14,10 @@
 </script>
 
 {#if loaded || !animateOnMount}
-  <div class="bg-white bg-opacity-75 rounded-md p-2" in:fade={{ duration: 1000, easing: cubicIn }}>
+  <div
+    class="bg-white bg-opacity-75 rounded-md p-2"
+    in:fade={{ duration: 1000, easing: cubicIn, delay }}
+  >
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"

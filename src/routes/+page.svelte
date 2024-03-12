@@ -1,7 +1,13 @@
 <script lang="ts">
-  import Hero from '../lib/components/Hero/Hero.svelte'
+  import Features from '$lib/components/Marketing/Features/Features.svelte'
+  import Hero from '../lib/components/Marketing/Hero.svelte'
 </script>
 
-<section class="bg-white dark:bg-gray-900">
-  <Hero />
-</section>
+<main>
+  <section>
+    <Hero />
+  </section>
+  <section>
+    <Features />
+  </section>
+</main>
