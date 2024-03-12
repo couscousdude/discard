@@ -11,6 +11,6 @@
   <Header />
   <div class="h-20" />
   <slot />
-  <div class="h-72" />
+  <div class="h-[500px] sm:h-80 md:h-72" />
   <Footer />
 </div>

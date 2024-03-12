@@ -15,8 +15,7 @@
         </div>
         <h3 class="mb-2 text-xl font-bold dark:text-white">Powered by AI</h3>
         <p class="text-gray-500 dark:text-gray-400">
-          Protect your organization, devices and stay compliant with our structured workflows and
-          custom permissions made for you.
+          Generate flash cards faster than the speed of thought. Let us do the thinking for you.
         </p>
       </div>
       <div in:fade={{ duration: 600, delay: 200 }}>
@@ -25,12 +24,19 @@
         >
           <TerminalSolid class="text-primary-300" />
         </div>
-        <h3 class="mb-2 text-xl font-bold dark:text-white">Free and open source, forever</h3>
+        <h3 class="mb-2 text-xl font-bold dark:text-white">Free and open source</h3>
         <p class="text-gray-500 dark:text-gray-400">
-          Licensed under the <a
+          discard is free, <a
+            href="https://www.fsf.org/about/what-is-free-software"
+            target="_blank"
+            class="link-default">as in Freedom</a
+          >. Licensed under the
+          <a
             class="link-default"
-            href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU GPL v3</a
-          >.
+            href="https://www.gnu.org/licenses/gpl-3.0.en.html"
+            target="_blank">GNU General Public License v3</a
+          >, a strong copyleft license that allows you to use, hack, modify, share, or redistribute
+          it.
         </p>
       </div>
       <div in:fade={{ duration: 600, delay: 400 }}>
@@ -41,8 +47,8 @@
         </div>
         <h3 class="mb-2 text-xl font-bold dark:text-white">Minimal</h3>
         <p class="text-gray-500 dark:text-gray-400">
-          Makes flashcards powered by AI. Nothing more, nothing less. We'll never show you a paywall
-          popup or ad.
+          Makes flashcards powered by AI. Nothing more, nothing less. We'll never show you a
+          paywall, popup or ad.
         </p>
       </div>
     </div>
