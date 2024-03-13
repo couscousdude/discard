@@ -7,6 +7,11 @@
   import Footer from '$lib/components/Nav/Footer.svelte'
 </script>
 
+<svelte:head>
+  <title>discard</title>
+  <meta name="description" content="a new way to flashcard." />
+</svelte:head>
+
 <div class="min-h-screen relative">
   <Header />
   <div class="h-20" />

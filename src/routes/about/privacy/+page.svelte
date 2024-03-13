@@ -1,3 +1,7 @@
+<svelte:head>
+  <title>Privacy Policy - discard</title>
+</svelte:head>
+
 <main class="mx-auto container gap-8 flex flex-col px-3 max-w-3xl">
   <h1 class="mt-10 text-4xl font-bold text-center text-gray-900 dark:text-white">Privacy Policy</h1>
   <p class="text-gray-500 dark:text-gray-400">
