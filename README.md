@@ -1,5 +1,7 @@
 # dis**card**
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/f640a02c67f9be04e6e2/maintainability)](https://codeclimate.com/github/couscousdude/discard/maintainability)
+
 not just another flashcards app.
 
 ## What is it?
