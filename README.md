@@ -11,10 +11,14 @@ but instead provide a starting point for you to hack as you see fit into a custo
 
 ## Tech stack
 
-discard's core tech stack is Svelte + SvelteKit. Svelte is a new web framework which offloads most of the overhead associated with web frameworks to the compile step, leaving you with a tiny bundle size (oftentimes less than just the size of `react` and `react-dom`)!
+discard's core tech stack is Svelte + SvelteKit. Svelte is a framework which
+offloads most of the overhead associated with web frameworks to the compile step, leaving
+you with a tiny bundle size (oftentimes less than just the size of `react` and `react-dom`)!
+We are also using PostgreSQL and `Prisma` as the ORM. For authentication, we are planning
+to use `auth.js/sveltekit`.
 
 ## How do I use it?
 
-discard does not itself provide any service. Instead, it's meant to be a site that you
-hack yourself to add your cards and features. This assumes you have a basic knowledge of TypeScript and Svelte.
-At the most basic level, you can simply replace the placeholder cards with your own.
+discard is currently heavily work-in-progress, and most of its features are non-functional.
+Once basic functionality is established, you will be able to access it on its website
+(or self-host it, using your own API keys)
