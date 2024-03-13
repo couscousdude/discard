@@ -1,13 +1,16 @@
+import { prisma } from '$lib/server/db.server'
 import type { RequestHandler } from '@sveltejs/kit'
-import { PrismaClient } from '@prisma/client'
 
 export const GET: RequestHandler = async () => {
-  return new Response(JSON.stringify({ id: 1 }))
+  try {
+    const cardsets = await prisma.card_sets.findMany()
+    return new Response(JSON.stringify(cardsets))
+  } catch (error) {
+    return new Response(JSON.stringify({ error, status: 500 }))
+  }
 }
 
 export const POST: RequestHandler = async ({ request }) => {
-  const prisma = new PrismaClient()
-
   try {
     // Create a new card set
     const cardSet = await prisma.card_sets.create({
