@@ -18,6 +18,11 @@
   }
 </script>
 
+<svelte:head>
+  <title>discard - {status}</title>
+  <meta name="description" content={error?.message} />
+</svelte:head>
+
 <main>
   {#if errorComponent}
     <svelte:component this={errorComponent} {error} />
