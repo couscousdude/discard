@@ -1,9 +1,9 @@
-import { prisma } from '$lib/server/db.server'
+import { db } from '$lib/server/db.server'
 import type { RequestHandler } from '@sveltejs/kit'
 
 export const GET: RequestHandler = async () => {
   try {
-    const cardsets = await prisma.card_sets.findMany()
+    const cardsets = await db.card_sets.findMany()
     return new Response(JSON.stringify(cardsets))
   } catch (error) {
     return new Response(JSON.stringify({ error, status: 500 }))
@@ -13,7 +13,7 @@ export const GET: RequestHandler = async () => {
 export const POST: RequestHandler = async ({ request }) => {
   try {
     // Create a new card set
-    const cardSet = await prisma.card_sets.create({
+    const cardSet = await db.card_sets.create({
       data: {
         user_id: 1,
         title: 'Sample Card Set',
@@ -23,7 +23,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
     // Create sample cards and associate them with the card set
     const cards = await Promise.all([
-      prisma.cards.create({
+      db.cards.create({
         data: {
           card_set_id: cardSet.id,
           front_text: 'What is the capital of France?',
@@ -36,7 +36,7 @@ export const POST: RequestHandler = async ({ request }) => {
           }
         }
       }),
-      prisma.cards.create({
+      db.cards.create({
         data: {
           card_set_id: cardSet.id,
           front_text: 'What is the largest planet in our solar system?',
@@ -52,7 +52,7 @@ export const POST: RequestHandler = async ({ request }) => {
           }
         }
       }),
-      prisma.cards.create({
+      db.cards.create({
         data: {
           card_set_id: cardSet.id,
           front_text: 'The __ is the powerhouse of the cell.',
@@ -66,11 +66,8 @@ export const POST: RequestHandler = async ({ request }) => {
         }
       })
     ])
-
     return new Response(JSON.stringify({ cardSet, cards, status: 201 }))
   } catch (error) {
     return new Response(JSON.stringify({ error, status: 500 }))
-  } finally {
-    await prisma.$disconnect()
   }
 }
